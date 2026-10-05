@@ -21,3 +21,6 @@
 1. Pull latest main on virtual-visit-selfhost
 2. Finish incomplete items from last WIP commit message
 3. Redeploy Vercel if needed
+
+## Latest push seen at handoff
+- `3488182` — Landing: no form, Enter room button, one-viewport hero with MacBook + iPhone mockups (posters); /room name prompt; hidden demo mode for clips
