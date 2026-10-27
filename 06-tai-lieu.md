@@ -3,7 +3,7 @@
 ## Trong folder này
 | Đường dẫn | Mô tả |
 |---|---|
-| `README.md` | Cách dùng folder, thứ tự đọc, prompt "Bắt đầu nhanh" |
+| `README.md` | Cách dùng folder, thứ tự đọc, prompt "Bắt đầu nhanh" (cập nhật 27/10/2026) |
 | `00-tong-quan.md` | HOWL LAB là gì, mục tiêu build/ship/earn |
 | `01-team.md` | Vai trò IVAN/DEVIN/KAI/MEIL, cách làm việc với Founder |
 | `02-ngan-sach.md` | Quỹ Cursor $5, quỹ vận hành 1tr/tháng, luật duyệt chi |
@@ -12,6 +12,11 @@
 | `05-quyet-dinh.md` | Nhật ký quyết định + đánh giá build/ship/earn |
 | `07-howlsos.md` | HowlsOS: repo, deploy, commit, giới hạn, tham chiếu tryonenotch.com |
 | `08-viec-khac.md` | Domain, Zalo, việc cá nhân đang treo; chuyển tài khoản Cursor mất/còn gì |
+| `09-cap-nhat-2026-10-05.md` | Cập nhật HowlsOS Apple HIG charts, bài học báo thức Mac |
+| `10-virtual-visit-2026-10-05.md` | Virtual Visit MVP (ZEP gateway & self-host) |
+| `11-ivan-voice-and-visit-ux-2026-10-05.md` | Quy tắc giọng điệu IVAN (`dạ/thưa`) & UX Virtual Visit |
+| `12-virtual-visit-handoff-2pct-2026-10-05.md` | Handoff Virtual Visit self-host (`243f519`) |
+| `13-cap-nhat-2026-10-27.md` | **Cập nhật tổng hợp 05/10 → 27/10/2026**: Standing rules, TAPTAP, EOI, ViCall, Vivis, Tryon, 10+ dự án & hạ tầng MCP |
 | `docs/howlsos-repo/SPEC.md` | Spec HowlsOS v0.1 (prompt spec cho agent) |
 | `docs/howlsos-repo/README.md` | README repo HowlsOS |
 | `assets/howlsos/*.png` | 4 ảnh HowlsOS: dashboard desktop, proposal v4 hero/mockup 1440px, mockup 390px |
@@ -23,38 +28,37 @@
 | `docs/personal-os-repo/docs/*.md` | 11 tài liệu Phase 0 (architecture, domain-model, schema, erd, api, security, integrations, ai-tools, roadmap, phase-1-plan, risks, decisions) — tóm tắt ở `03-personal-os.md` |
 | `assets/mvp-shots-v4/*.png` | 5 ảnh mockup MVP v4: hero MacBook+iPhone, MacBook dashboard, MacBook kanban, iPhone dashboard, iPhone sidebar |
 
-## Link ngoài
+## Link ngoài (Repos & Production URLs)
 | Link | Mô tả |
 |---|---|
-| https://github.com/PNCTriet/personal-os | Repo Personal OS (PUBLIC) |
-| https://personal-os-blond-eta.vercel.app | Bản live (auto-deploy từ `main`, mock data) |
-| https://github.com/PNCTriet/HowlsOS | Repo HowlsOS (PRIVATE) |
-| https://howlsos.vercel.app | HowlsOS live (Vercel `howlsos`, team `howlstudios-projects`); proposal mẫu `/p/pr_lumiere` |
+| https://github.com/PNCTriet/howl-lab-context | Repo Handoff / Context Pack này (PUBLIC) |
+| https://github.com/PNCTriet/taptap | Repo **TAPTAP** — NFC Stamp Collection Thảo Cầm Viên (PRIVATE) |
+| https://taptap-five.vercel.app | **TAPTAP** live (Vercel `taptap`, Supabase `TAPTAP` `dfvkhtheqcsjfbfihzrk`) |
+| https://github.com/PNCTriet/EOI_websiteofficial | Repo **EOI (`@eoilinhtinh`)** — Shop đèn & mô hình in 3D |
+| https://eoilinhtinh.com | **EOI** live (Vercel `eoi-websiteofficial-ivtp`, Supabase `EOILINHTINH` `yoqwyvhqsodvsowhxnum`) |
+| https://github.com/PNCTriet/howlslab-avatar | Repo **ViCall / Howls Lab Avatar** (PRIVATE) |
+| https://vircall.howlslab.com | **ViCall** live (`howlslab-avatar.vercel.app` — Tavus Lucy, Lee, Dr. Paws) |
+| https://github.com/PNCTriet/virtual-visit-selfhost | Repo **Virtual Visit / Vivis** (Self-host Phaser 3 + Supabase Realtime) |
+| https://vivis.howlslab.com | **Virtual Visit (Vivis)** live (`virtual-visit-selfhost.vercel.app`, Supabase `HOWLSLAB` `jexjlaqblulgfjcssekb`) |
+| https://github.com/PNCTriet/PER_Portfolio | Repo **Howls Lab & Fitting Lab (Tryon)** |
+| https://howlslab.com | Trang chủ **Howls Lab** |
+| https://tryon.howlslab.com | **Fitting Lab / Tryon** live |
+| https://github.com/PNCTriet/HowlsOS | Repo **HowlsOS** (PRIVATE) |
+| https://howlsos.vercel.app | **HowlsOS** live (Vercel `howlsos`, team `howlstudios-projects`); proposal mẫu `/p/pr_lumiere` |
+| https://github.com/PNCTriet/personal-os | Repo **Personal OS** (PUBLIC) |
+| https://personal-os-blond-eta.vercel.app | **Personal OS** live (auto-deploy từ `main`, mock data) |
 | https://tryonenotch.com | Tham chiếu thiết kế Founder thích |
 
-## Trên Mac Founder
+## Trên Mac Founder (`MacBook-Air-cua-Tina`, user `tina`, `~ = /Users/tina`)
 | Đường dẫn | Mô tả |
 |---|---|
-| `/Users/trietnguyenpham/HOWL-LAB-Context` | Bản sao folder này (bền vững khi đổi tài khoản) |
-| `~/Projects/HowlsOS` | Clone HowlsOS |
-| `~/Desktop/iPhone-Backup/banhcuon` | Backup ảnh iPhone (15.986 file, ~70 GB) |
+| `/Users/tina` | Thư mục Home trên MacBook Air của anh Triết (Office chỉ giữ Word & Excel) |
+| `/Users/trietnguyenpham/HOWL-LAB-Context` | Bản sao folder này trên máy cũ (tham khảo lịch sử) |
 
-## Trên box của Grok Bot (máy Linux dùng chung của các agent; **mất khi đổi tài khoản Cursor**)
+## Trên box của Grok Bot (máy Linux dùng chung của các agent)
 | Đường dẫn | Mô tả |
 |---|---|
-| `/workspace/howl-lab-context/` | Bản gốc của folder này |
-| `/workspace/personal-os/` | Clone repo (đang chậm 1 commit so với `origin/main`) |
-| `/workspace/research/personal-os-competitive-brief.md` | Brief đối thủ của MEIL (gốc) |
-| `/workspace/cloud-agent-transcripts/bc-48727517-...jsonl` | Transcript cloud agent DEVIN T14 (đã huỷ) |
-| `/workspace/mvp-shots/` | Ảnh chụp MVP các phiên bản (gốc, v2, v3, v4; `v4/raw/` là ảnh thô) |
-| `/workspace/mvp-tools/` | Script Playwright chụp ảnh MVP (shots.mjs, prod.mjs, crop.mjs...) |
-| `/workspace/personal-os-phase0.zip` | Bản zip Phase 0 docs cũ |
-| `/workspace/apple-design/DESIGN.md` | Tài liệu design tham khảo phong cách Apple |
-| `/workspace/agent-tools/` | Output tool cũ (listing git tree repo) |
-| `/workspace/HowlsOS/` | Clone HowlsOS (đồng bộ `origin/main`) |
-| `/workspace/HowlsOS-shots/` | Ảnh chụp HowlsOS (app + proposal v2/v3/v4) |
-| `/workspace/onenotch/` | Phân tích tryonenotch.com (HTML, assets, ảnh full-page) |
-| `/workspace/apple-bezels/` | Bezel Apple Design Resources + `Apple Design Resources License.rtf` (đọc trước khi dùng marketing) |
-
-## Không thuộc HOWL LAB (dự án khác trên box, chỉ để biết)
-Howls Studio (event agency tech): `/workspace/Signature-Demo`, `/workspace/p0-patch`, `/workspace/exports/Signature-Demo-TCB.tar.gz`, `/workspace/boss-cafe-poster`, `/workspace/boss-visibility`, `/workspace/howls-marketing`, `/workspace/pendiasure-photos`, `/workspace/tcb-key-moment-pack`, `/workspace/Howls-BaoGia-Checkin-Photobooth-LED-45M.xlsx`, `/workspace/emails`, `/workspace/slides-preview`, memes/gif.
+| `/workspace/hlc/` | Clone trực tiếp của `PNCTriet/howl-lab-context` |
+| `/workspace/howl-lab-context/` | Bản sao folder context trước đây |
+| `/workspace/personal-os/` | Clone repo Personal OS |
+| `/workspace/HowlsOS/` | Clone repo HowlsOS |

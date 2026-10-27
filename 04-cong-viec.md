@@ -1,47 +1,45 @@
-# 04 — Task board (trạng thái 2026-10-04 20:40)
+# 04 — Task board (trạng thái 2026-10-27)
 
-> **Team nhìn chung TẠM DỪNG** từ **2026-09-29 02:44** (giờ VN) cho đến khi Founder **duyệt MVP**. Không launch agent / tiêu tiền khi chưa có lệnh.
-> **Ngoại lệ (04/10):** IVAN được giao task code cho DEVIN/KAI; họ báo cáo/xin duyệt qua IVAN. MEIL research "bá khí", báo thẳng Founder.
+> Xem chi tiết đầy đủ các dự án và quy tắc vận hành tháng 10/2026 tại **`13-cap-nhat-2026-10-27.md`**.
+> Phân công chuẩn: giao việc code/infra cho **`@DEVIN`**, AI/MCP/RAG cho **`@KAI`**, research/growth cho **`@MEIL`**; mặc định không dùng Cloud Agent khi chưa cần.
 
-## ✅ Done
-- Phase 0: bộ tài liệu kiến trúc (docs/), schema proposal đã validate, 21 ADR — commit `c71e3a8`.
-- Lock ADR-003/012/013/015/017 (Founder duyệt 2026-09-29); ADR còn lại TD accept — `0a9f980`, `4156fe8`.
-- Phase 1 plan (22 task) — `88e5cc9`.
-- MVP v0 PR #1 (`7766f77`), CRM app shell PR #2 (`c964f39`), mobile + i18n PR #3 (`375f22a`), restyle Notion-like + login + avatar menu (`4657793`). Live tại https://personal-os-blond-eta.vercel.app (mock data).
-- Ảnh mockup MVP v4 (MacBook/iPhone) — `assets/mvp-shots-v4/`.
-- **HowlsOS** (03–04/10): v0.1 prototype `4b54b4b` → proposal Apple-style `c0aa23a` → playful v3 `bb75dd5` → DEVIN v4 bezel Apple thật + VI/EN `9033f30`, `43c32be`. Live https://howlsos.vercel.app. Chi tiết `07-howlsos.md`.
-- Phân tích thiết kế tryonenotch.com (04/10) — tóm tắt ở `07-howlsos.md`.
-- Mua domain `trietnguyenpham.tech` qua Nhân Hòa (04/10) — còn thủ tục, xem `08-viec-khac.md`.
-- **MEIL:** competitive + UX brief — `docs/briefs/personal-os-competitive-brief.md` (gốc: `/workspace/research/personal-os-competitive-brief.md`).
+## ✅ Done (Cập nhật tháng 10/2026)
+- **TAPTAP (`PNCTriet/taptap` — `https://taptap-five.vercel.app`):**
+  - Hoàn thiện ứng dụng thu thập tem số NFC thí điểm tại Thảo Cầm Viên Sài Gòn (4 trạm, bản đồ GPS `/map`, minh hoạ động vật đồng bộ, hiệu ứng mobile-first).
+  - Chuyển sang thuần **Google OAuth (`signInWithOAuth`)**, bỏ modal đăng nhập 1-chạm.
+  - Dựng Supabase project riêng **`TAPTAP`** (`dfvkhtheqcsjfbfihzrk`, region `ap-northeast-2`, org `TAPTAP`), chạy xong migration 12 bảng (`taptap_phase0_initial_schema`), RLS `TO authenticated` và dữ liệu seed Thảo Cầm Viên.
+- **EOI (`PNCTriet/EOI_websiteofficial` — `https://eoilinhtinh.com`):**
+  - Relaunch web thương mại điện tử đèn & mô hình in 3D `@eoilinhtinh` (Next.js 15, Supabase `EOILINHTINH` `yoqwyvhqsodvsowhxnum`, Resend).
+  - Chuyển sang Vercel project mới `eoi-websiteofficial-ivtp` (team `howlstudios-projects`), gắn domain `eoilinhtinh.com` & `www.eoilinhtinh.com`.
+  - Vá bảo mật admin (`app_metadata.role = "admin"`), khóa RLS bảng `custom_checkout_links`, tích hợp Google OAuth.
+- **ViCall / Howls Lab Avatar (`PNCTriet/howlslab-avatar` — `https://vircall.howlslab.com`):**
+  - Tích hợp Tavus video-call với 3 persona (Lucy `ped2a7d02db5`, Lee `p6d958e9a9f8`, Dr. Paws), bật `raven-1` vision + nút bật/tắt camera cho khách, hỗ trợ import file `.md` hướng dẫn (tối đa 100KB) theo từng cuộc gọi hoặc lưu làm Owner instructions có mật khẩu admin.
+- **Virtual Visit / Vivis (`PNCTriet/virtual-visit-selfhost` — `https://vivis.howlslab.com`):**
+  - Ship bản sửa lỗi di chuyển 4 hướng, cinema/shared TV, arcade games, gõ tiếng Việt, proximity chat, demo clip MacBook/iPhone (Supabase `HOWLSLAB` `jexjlaqblulgfjcssekb`).
+- **Fitting Lab / Tryon (`PNCTriet/PER_Portfolio` — `https://tryon.howlslab.com` & `https://howlslab.com`):**
+  - Đồng bộ thương hiệu sang Howls Lab (founded 2025, `howls.sslab@gmail.com`), giao diện light-mode chuẩn Apple HIG.
+- **Danh mục dự án sự kiện & R&D:** Tổng hợp 10 dự án (Takico, MB Life Photobooth, MB Life Lucky Draw + iPad app "MB Life – Key Moment", Pendiasure, Jump Jump, Live Puzzle, Vivis, ViCall, Tryon, OCX) cùng TAPTAP và EOI.
+- **HowlsOS (`https://howlsos.vercel.app`):**
+  - Hoàn thiện charts admin chuẩn Apple HIG (`68596a9`), bezel Apple thật + VI/EN (`43c32be`), proposal mẫu `/p/pr_lumiere` (`aa83506`).
+- **Personal OS (`https://personal-os-blond-eta.vercel.app`):**
+  - Phase 0 docs + 21 ADR (`c71e3a8`, `0a9f980`, `4156fe8`), Phase 1 plan (`88e5cc9`), MVP v0 đến v4 (`4657793`), competitive brief của MEIL.
 
-## 🔄 In progress
-- **MEIL:** research xu hướng "bá khí" trên Threads/Instagram → báo thẳng Founder (kết quả: chưa xác minh).
-- **HowlsOS:** chờ Founder xem v4 và chọn bước tiếp (xem Next trong `07-howlsos.md`).
-- **Domain** `trietnguyenpham.tech`: **nộp hồ sơ trước 07/10/2026**, xác nhận chủ sở hữu trong 15 ngày (thongbaotenmien.vn).
+## 🔄 In progress / Chờ cấu hình
+- **TAPTAP — Google OAuth:** Đang chờ dán Google Client ID / Client Secret vào Supabase project `TAPTAP` (`dfvkhtheqcsjfbfihzrk`) và cấu hình Redirect URL trên Google Cloud Console.
+- **EOI — Báo giá đơn hàng:** Thực hiện xuất file báo giá Excel lưu về MacBook Air của anh Triết (`MacBook-Air-cua-Tina`) mỗi khi anh gửi tên khách, mã SP, số lượng, đơn giá.
 
-## ⛔ Blocked
+## ⛔ Blocked / On hold (Personal OS & HowlsOS)
 | Ai | Việc | Trạng thái / lý do |
 |---|---|---|
-| DEVIN | **T14** API keys, permissions, audit, idempotency trên branch `feat/core-api` | Cloud agent chạy ~4 phút (transcript: hoạt động 02:42–02:44 ngày 29/09 giờ VN) rồi **bị huỷ**; **không có branch/PR**. Brief để relaunch: `docs/briefs/devin-t14-api-keys-brief.md`. Chờ Founder duyệt MVP. |
-| KAI | **1.5a** = endpoint `/api/mcp` + 2–3 task tools, dùng `ApiKeyResolver` stub | **Chưa từng launch.** Chờ MVP. (Theo phase-1-plan §8, bản đầy đủ 1.5a có 6 tool: get_today, get_tasks, create_task, update_task, complete_task, get_action_status.) |
-| KAI | **1.5b** ChatGPT OAuth | **Ngoài quỹ** → cần Founder duyệt chi. |
-| MEIL | Follow-up sau competitive brief | **On hold.** |
-| Hạ tầng | Supabase hosted | Hết 2 project free (`DNY_DB`, `HOWLSLAB`) → chờ Founder chọn. |
-| Hạ tầng | Bật CI | Thiếu GitHub scope `workflow`; file chờ ở `ci/github-actions-ci.yml`. |
+| DEVIN | **T14** API keys, permissions, audit, idempotency (`personal-os`) | On hold từ 29/09. Brief lưu tại `docs/briefs/devin-t14-api-keys-brief.md`. |
+| KAI | **1.5a** endpoint `/api/mcp` + task tools (`personal-os`) | On hold chờ mở lại Phase 1 Personal OS. |
+| KAI | **1.5b** ChatGPT OAuth (`personal-os`) | Ngoài quỹ → cần Founder duyệt chi khi mở lại. |
 
 ## ❓ Chờ Founder quyết
-1. **Duyệt MVP** (mở khoá cả team).
-2. Nói **"đồng ý"** trong group Howlslab để IVAN được duyệt chi trong phần quỹ (chưa có tính đến 2026-09-30).
-3. **Supabase:** pause một project / Pro ~ $25/tháng / giữ mock.
-4. **Bug UI** (4 bug ở `03-personal-os.md`): sửa ngay hay sau MVP.
-5. **`documents/UX_UI.md`** (mô tả app DNY CRM, lọt vào repo public): giữ hay xoá. Kèm vấn đề email công việc trong commit `4657793`.
-6. MEIL có nên quét **~3 ý tưởng sản phẩm trả phí** không.
-7. (Từ docs) ADR-007, ADR-009, ADR-014 còn Proposed; guardrail 24h của ADR-012.
-8. **HowlsOS:** bước tiếp (persistence, trang sửa proposal, enforce phân quyền); kiểm tra guideline bezel Apple trước khi dùng marketing.
-9. **Zalo:** nháp trả lời Uyển Nhi (group "HỆ THỐNG PHẦN MỀM") — Founder quyết sau. Xem `08-viec-khac.md`.
+1. **TAPTAP:** Hoàn tất dán Google OAuth Client ID/Secret để test luồng đăng nhập thật trên `taptap-five.vercel.app`.
+2. **HowlsOS & Personal OS:** Chọn thời điểm mở lại các task backend/persistence tiếp theo.
 
-## ⏭ Next (đề xuất thứ tự sau khi Founder mở khoá — IVAN chốt lại)
-1. Supabase quyết xong → DEVIN relaunch T14 bằng brief có sẵn (một cloud agent, scope nhỏ, báo chi phí).
-2. KAI 1.5a (`/api/mcp` + 2–3 task tools, ApiKeyResolver stub) — sau hoặc song song T14 tuỳ quỹ (luật: một cloud agent một lúc).
-3. Sửa 4 bug UI nếu Founder muốn làm ngay.
-4. Theo đề xuất "earn" (`05-quyet-dinh.md`): MEIL chuyển sang tìm nhu cầu trả tiền + soạn nháp outreach (chờ Founder duyệt).
+## ⏭ Next
+1. Hoàn tất cấu hình Google OAuth cho **TAPTAP** và kiểm thử end-to-end luồng quét NFC + lưu tem tại 4 trạm Thảo Cầm Viên.
+2. Hỗ trợ vận hành **EOI (`eoilinhtinh.com`)**, xuất báo giá Excel khi có đơn khách lẻ/sỉ.
+3. Tiếp tục nâng cấp **ViCall (`vircall.howlslab.com`)** và **Vivis (`vivis.howlslab.com`)** theo yêu cầu demo của anh Triết.

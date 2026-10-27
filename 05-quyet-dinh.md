@@ -1,6 +1,6 @@
 # 05 — Nhật ký quyết định
 
-Giờ theo Asia/Saigon. "TD" = Technical Director (IVAN). Nguồn: brief bàn giao 2026-10-01, `docs/personal-os-repo/docs/decisions.md`, git log.
+Giờ theo Asia/Saigon. "TD" = Technical Director (IVAN). Nguồn: brief bàn giao 2026-10-01, `docs/personal-os-repo/docs/decisions.md`, git log, và cập nhật tháng 10/2026 (`13-cap-nhat-2026-10-27.md`).
 
 | Ngày | Quyết định | Ai | Nguồn |
 |---|---|---|---|
@@ -23,21 +23,17 @@ Giờ theo Asia/Saigon. "TD" = Technical Director (IVAN). Nguồn: brief bàn gi
 | 2026-10-04 | IVAN được **giao task code cho DEVIN/KAI** dù team vẫn tạm dừng; task IVAN giao thì báo cáo/xin duyệt qua IVAN | Founder | chat với IVAN |
 | 2026-10-04 | MEIL research xu hướng "bá khí" (Threads/Instagram), báo thẳng Founder | Founder | chat |
 | 2026-10-04 | Mua domain `trietnguyenpham.tech` (Nhân Hòa) | Founder | email Nhân Hòa trong Gmail |
+| 2026-10-05 | Quy tắc xưng hô bắt buộc: IVAN xưng `em`, gọi `anh`, luôn có `dạ/thưa`, không nói trống không | Founder | `11-ivan-voice-and-visit-ux-2026-10-05.md` |
+| 2026-10-05 | Khởi chạy **Virtual Visit self-host (`vivis.howlslab.com`)** dùng Phaser 3 + Tiled + Supabase Realtime thay cho bản miễn phí ZEP bị lộ thương hiệu | Founder | `10-virtual-visit-2026-10-05.md` |
+| 10/2026 | Quy tắc thương hiệu: `HOWLSTUDIO` là thương hiệu mẹ; `HOWLSLAB` cho sản phẩm công nghệ & R&D. Sản phẩm `HOWLSLAB` chưa public tuyệt đối không nhắc tới `HOWLSTUDIO`. Mọi bản demo song ngữ EN/VI (mặc định EN) | Founder | `13-cap-nhat-2026-10-27.md` |
+| 10/2026 | Chuẩn hoá giao diện toàn bộ sản phẩm theo **Apple HIG** (minimalist, ít chữ, giữ tỉ lệ ảnh gốc, nhiều khoảng trắng) | Founder | `13-cap-nhat-2026-10-27.md` |
+| 10/2026 | Ra mắt **ViCall (`vircall.howlslab.com`)** tích hợp Tavus (Lucy, Lee, Dr. Paws), `raven-1` vision và tính năng nạp `.md` instructions có mật khẩu bảo vệ Owner instructions | Founder | `13-cap-nhat-2026-10-27.md` |
+| 10/2026 | Relaunch **EOI (`eoilinhtinh.com`)** trên Vercel `eoi-websiteofficial-ivtp` + Supabase `EOILINHTINH` (`yoqwyvhqsodvsowhxnum`), vá phân quyền admin (`app_metadata.role = "admin"`) và khóa bảng `custom_checkout_links` | Founder | `13-cap-nhat-2026-10-27.md` |
+| 10/2026 | Khởi động **TAPTAP (`taptap-five.vercel.app`)** — nền tảng thu thập tem số NFC thí điểm tại Thảo Cầm Viên Sài Gòn; dùng thuần Google OAuth (`signInWithOAuth`) và tách riêng Supabase project **`TAPTAP`** (`dfvkhtheqcsjfbfihzrk`, org `TAPTAP`) | Founder | `13-cap-nhat-2026-10-27.md` |
 
-Ngày chính xác của các luật quỹ/Cursor: **chưa xác minh** (không có nguồn ghi ngày trên box).
-
-## Đánh giá "Build, ship, earn" (2026-09-29)
-- **Build: có. Ship: có** (MVP v0 live, auto-deploy).
-- **Earn: chưa**, vì:
-  - chưa có sản phẩm nào có người trả tiền;
-  - không có vai trò bán hàng;
-  - không có vòng phản hồi từ người dùng;
-  - mọi hành động ra bên ngoài đều phải qua Founder.
-- **Đề xuất (chưa được Founder chốt):**
-  1. Founder đóng vai **người bán** vài giờ/tuần.
-  2. **MEIL** chuyển sang **tìm nhu cầu trả tiền** và **soạn nháp outreach** (Founder duyệt trước khi gửi).
-  3. **Ship sản phẩm nhỏ có thu phí mỗi 2–4 tuần**; sản phẩm nào không có người trả thì **khai tử**.
-  4. **Personal OS = nền tảng nội bộ**; doanh thu đến từ **các tool AI/MCP nhỏ cho founder Việt Nam**.
+## Đánh giá "Build, ship, earn" (2026-09-29 & cập nhật 10/2026)
+- **Build & Ship:** Đã mở rộng mạnh trong tháng 10/2026 với hệ sinh thái sản phẩm live: **Virtual Visit (`vivis.howlslab.com`)**, **ViCall (`vircall.howlslab.com`)**, **Tryon (`tryon.howlslab.com`)**, **EOI (`eoilinhtinh.com`)**, **TAPTAP (`taptap-five.vercel.app`)**, cùng các giải pháp sự kiện thực tế (MB Life 10 năm — Photobooth, Lucky Draw, iPad Key Moment).
+- **Earn:** Kết hợp thương mại điện tử (`eoilinhtinh.com`), giải pháp công nghệ sự kiện B2B và các sản phẩm R&D của HOWL LAB.
 
 ## Quyết định đang mở
-Xem `04-cong-viec.md` → "Chờ Founder quyết".
+Xem `04-cong-viec.md` → "Chờ Founder quyết" và `13-cap-nhat-2026-10-27.md`.
